@@ -1,0 +1,22 @@
+export const companies = [
+    { id: 1, name: "Aykays", logo: "A", openRoles: 5, location: "Karachi", industry: "Software" },
+    { id: 2, name: "Creative Studio", logo: "C", openRoles: 3, location: "Remote", industry: "Design" },
+    { id: 3, name: "Tech Solutions", logo: "T", openRoles: 8, location: "Lahore", industry: "IT" },
+    { id: 4, name: "Digital Edge", logo: "D", openRoles: 2, location: "Islamabad", industry: "Marketing" },
+    { id: 5, name: "Tech Hub", logo: "H", openRoles: 4, location: "Karachi", industry: "Cloud" },
+    { id: 6, name: "Systems Ltd", logo: "S", openRoles: 12, location: "Lahore", industry: "Enterprise" },
+    { id: 7, name: "NetSol", logo: "N", openRoles: 10, location: "Lahore", industry: "FinTech" },
+    { id: 8, name: "10Pearls", logo: "P", openRoles: 15, location: "Karachi", industry: "Product Dev" },
+    { id: 9, name: "Arbitsoft", logo: "A", openRoles: 6, location: "Islamabad", industry: "AI & Data" },
+    { id: 10, name: "Devsinc", logo: "D", openRoles: 20, location: "Lahore", industry: "Outsourcing" },
+    { id: 11, name: "Folio3", logo: "F", openRoles: 7, location: "Karachi", industry: "AgriTech" },
+    { id: 12, name: "NorthBay", logo: "N", openRoles: 4, location: "Lahore", industry: "AWS Partner" },
+    { id: 13, name: "Afiniti", logo: "A", openRoles: 9, location: "Islamabad", industry: "AI Solutions" },
+    { id: 14, name: "VentureDive", logo: "V", openRoles: 11, location: "Karachi", industry: "Mobility" },
+    { id: 15, name: "Contour Software", logo: "C", openRoles: 18, location: "Karachi", industry: "Finance" },
+    { id: 16, name: "Tkxel", logo: "T", openRoles: 5, location: "Lahore", industry: "App Dev" },
+    { id: 17, name: "Confiz", logo: "C", openRoles: 6, location: "Lahore", industry: "Retail Tech" },
+    { id: 18, name: "Tintash", logo: "T", openRoles: 3, location: "Lahore", industry: "Gaming" },
+    { id: 19, name: "Ozi Technology", logo: "O", openRoles: 14, location: "Lahore", industry: "Apps" },
+    { id: 20, name: "PureLogics", logo: "P", openRoles: 8, location: "Lahore", industry: "E-commerce" }
+];

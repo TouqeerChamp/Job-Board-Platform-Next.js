@@ -1,93 +1,59 @@
+"use client";
+
+import { useState } from "react";
+import { jobs } from "@/data/jobs"; // Pakka karein ke data/jobs.ts mein saari jobs hain
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import JobCard from "@/components/JobCard";
 import Footer from "@/components/Footer";
 
-
 export default function Home() {
-  const jobs = [
-    {
-      title: "Frontend Developer",
-      company: "Aykays",
-      location: "Karachi, PK",
-      type: "Full Time"
-    },
-    {
-      title: "UI/UX Designer",
-      company: "Creative Studio",
-      location: "Remote",
-      type: "Contract"
-    },
-    {
-      title: "MERN Stack Developer",
-      company: "Tech Solutions",
-      location: "Lahore, PK",
-      type: "Full Time"
-    },
-    {
-      title: "Next.js Specialist",
-      company: "Digital Edge",
-      location: "Islamabad, PK",
-      type: "Remote"
-    },
-    {
-    title: "Frontend Developer" ,
-    company: "Aykays" ,
-    location: "Karachi" ,
-    type: "Full Time",
-    },
-    {
-    title: "UI/UX Designer",
-    company: "Creative Mind",
-    location: "Lahore",
-    type: "Contract",
-    },
-    {
-    title: "Backend Engineer",
-    company: "Tech Solutions",
-    location: "Islamabad",
-    type: "Full Time",
-    },
-    {
-    title: "Full Stack Developer",
-    company: "Tech Agency",
-    location: "Lahore",
-    type: "Full Time",
-    },
-    {
-    title: "Backend Engineer",
-    company: "Tech Hub",
-    location: "Karachi",
-    type: "Full Time",
-    },
-    {
-    title: "AI Prompt & Context Engineer",
-    company: "Tech Solutions",
-    location: "Karachi",
-    type: "Remote",
-    },
-  ];
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Logic: Direct filter (Simple aur Fast)
+  const filteredJobs = jobs.filter((job) => {
+    const s = searchTerm.toLowerCase().trim();
+    return (
+      job.title.toLowerCase().includes(s) ||
+      job.company.toLowerCase().includes(s) ||
+      job.location.toLowerCase().includes(s)
+    );
+  });
 
   return (
     <main className="min-h-screen bg-slate-50">
       <Navbar />
-      <Hero />
+      
+      {/* Search connect karne ke liye props */}
+      <Hero searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      {/* 2. Job Listing Section */}
       <section className="max-w-7xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-slate-900 mb-8">Latest Job Openings</h2>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold text-slate-900">
+            {searchTerm ? `Search Results for "${searchTerm}"` : "Latest Job Openings"}
+          </h2>
+          <span className="text-slate-500 font-medium">
+            {filteredJobs.length} Jobs Found
+          </span>
+        </div>
         
-        {/* 3. Grid Container (1 Row mein 2 Cards) */}
+        {/* Jobs Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {jobs.map((job, index) => (
-            <JobCard 
-              key={index}
-              title={job.title}
-              company={job.company}
-              location={job.location}
-              type={job.type}
-            />
-          ))}
+          {filteredJobs.length > 0 ? (
+            filteredJobs.map((job, index) => (
+              <JobCard key={`${job.slug}-${index}-${searchTerm}`} {...job} />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200">
+               <p className="text-slate-500 text-xl font-medium">Bhai, is naam ki koi job nahi mili! 😅</p>
+               <button 
+                 onClick={() => setSearchTerm("")}
+                 className="mt-4 text-indigo-600 font-bold underline"
+               >
+                 Clear Search
+               </button>
+            </div>
+          )}
         </div>
       </section>
 

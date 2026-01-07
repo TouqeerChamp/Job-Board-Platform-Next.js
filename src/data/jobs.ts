@@ -1,0 +1,22 @@
+export const jobs = [
+  { slug: "ai-prompt-engineer-1", title: "AI Prompt Engineer", company: "Aykays", location: "Karachi", type: "Full Time", desc: "Expert in LLM prompting...", requirements: ["GPT-4", "Python", "NLP"] },
+  { slug: "ml-engineer-2", title: "Machine Learning Engineer", company: "Tech Solutions", location: "Lahore", type: "Remote", desc: "Building scalable ML models...", requirements: ["PyTorch", "TensorFlow"] },
+  { slug: "data-scientist-3", title: "Data Scientist", company: "Systems Ltd", location: "Islamabad", type: "Full Time", desc: "Analyzing complex datasets...", requirements: ["SQL", "R", "Python"] },
+  { slug: "nlp-specialist-4", title: "NLP Specialist", company: "10Pearls", location: "Karachi", type: "Hybrid", desc: "Working on language models...", requirements: ["BERT", "Transformers"] },
+  { slug: "ai-researcher-5", title: "AI Research Scientist", company: "Arbitsoft", location: "Islamabad", type: "Full Time", desc: "Researching next-gen AI...", requirements: ["PhD CS", "PyTorch"] },
+  { slug: "computer-vision-6", title: "Computer Vision Engineer", company: "Devsinc", location: "Lahore", type: "Full Time", desc: "Object detection experts...", requirements: ["OpenCV", "CUDA"] },
+  { slug: "ai-product-manager-7", title: "AI Product Manager", company: "NetSol", location: "Lahore", type: "Full Time", desc: "Managing AI lifecycles...", requirements: ["Product Management", "AI Ethics"] },
+  { slug: "full-stack-ai-8", title: "Full Stack AI Developer", company: "Tech Hub", location: "Remote", type: "Contract", desc: "Integrating AI in web...", requirements: ["Next.js", "OpenAI API"] },
+  { slug: "ai-devops-9", title: "AI DevOps Engineer", company: "Digital Edge", location: "Karachi", type: "Full Time", desc: "Deploying AI models...", requirements: ["Docker", "Kubernetes", "MLOps"] },
+  { slug: "chatbot-developer-10", title: "Chatbot Developer", company: "Creative Studio", location: "Remote", type: "Contract", desc: "Building conversational AI...", requirements: ["LangChain", "Node.js"] },
+  { slug: "ai-ethicist-11", title: "AI Ethics Specialist", company: "Google Partner", location: "Lahore", type: "Hybrid", desc: "Ensuring unbiased AI...", requirements: ["Ethics", "Policy Making"] },
+  { slug: "big-data-ai-12", title: "Big Data AI Architect", company: "Teradata", location: "Islamabad", type: "Full Time", desc: "Architecting data pipelines...", requirements: ["Spark", "Hadoop", "AI"] },
+  { slug: "ai-security-13", title: "AI Security Analyst", company: "Cyber Shield", location: "Karachi", type: "Full Time", desc: "Securing AI systems...", requirements: ["Cybersecurity", "AI Safety"] },
+  { slug: "robotics-engineer-14", title: "Robotics AI Engineer", company: "RoboTech", location: "Lahore", type: "Full Time", desc: "Autonomous robot control...", requirements: ["ROS", "C++", "AI"] },
+  { slug: "ai-copywriter-15", title: "AI Copywriter", company: "Content AI", location: "Remote", type: "Freelance", desc: "Using AI for content...", requirements: ["Creative Writing", "AI Tools"] },
+  { slug: "generative-ai-16", title: "Generative AI Specialist", company: "Artify", location: "Karachi", type: "Full Time", desc: "Working on Stable Diffusion...", requirements: ["Midjourney", "Stable Diffusion"] },
+  { slug: "ai-quality-17", title: "AI QA Tester", company: "TestHouse", location: "Lahore", type: "Contract", desc: "Testing AI reliability...", requirements: ["Manual Testing", "AI Logic"] },
+  { slug: "voice-ai-18", title: "Voice AI Engineer", company: "SpeakUp", location: "Islamabad", type: "Full Time", desc: "Speech-to-text systems...", requirements: ["TTS", "STT", "Python"] },
+  { slug: "ai-strategy-19", title: "AI Strategy Consultant", company: "McKinsey P.", location: "Karachi", type: "Full Time", desc: "Business AI strategy...", requirements: ["Business Analysis", "AI Trends"] },
+  { slug: "junior-ai-20", title: "Junior AI Developer", company: "StartUp", location: "Remote", type: "Intern", desc: "Learning and building AI...", requirements: ["Basics of AI", "Python"] }
+];

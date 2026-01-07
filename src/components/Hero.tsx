@@ -1,14 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Hero = () => {
+// 1. Interface hamesha function ke BAHAR hota hai
+interface HeroProps {
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+}
+
+// 2. Props ko yahan receive kiya
+const Hero = ({ searchTerm, setSearchTerm }: HeroProps) => {
   return (
     <> 
-      {/* 1. Hero Content Section (Is par max-width lagayi hai taake ye beech mein rahe) */}
+      {/* Hero Content Section */}
       <div className='max-w-7xl mx-auto py-16 px-6 lg:py-10'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
           
-          {/* Left Side: Content */}
           <div className='text-left'>
             <h1 className='text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight'>
               Get Your <span className='text-indigo-900'>Dream Job</span> Today
@@ -17,12 +23,14 @@ const Hero = () => {
               Explore thousands of job opportunities from top-rated companies. Your professional journey starts here.
             </p>
 
-            {/* Simple Search Input inside Hero */}
+            {/* Search Input Section */}
             <div className='mt-10 flex flex-col sm:flex-row gap-3'>
               <input 
                 type="text" 
-                placeholder="Search Job Title..." 
-                className='flex-1 p-4 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm'
+                placeholder="Search Job Title, Company or City..." 
+                value={searchTerm} // State se connected hai
+                onChange={(e) => setSearchTerm(e.target.value)} // Typing se state update hogi
+                className='flex-1 p-4 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm text-slate-900'
               />
               <button className='bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all'>
                 Search
@@ -30,7 +38,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Side: Image */}
           <div className='relative w-full h-[300px] md:h-[450px]'>
             <Image 
               src="/hero.jpg" 
@@ -43,7 +50,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 2. Features Section (Ye ab container se bahar hai, isliye FULL WIDTH color lega) */}
+      {/* Features Banner */}
       <section className='w-full py-16 my-12 bg-indigo-200'>
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
@@ -54,23 +61,6 @@ const Hero = () => {
           </p>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </>
   )
 }
